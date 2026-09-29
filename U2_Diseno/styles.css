@@ -1,0 +1,468 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #32104F;
+}
+
+header {
+    width: 90%;
+    height: 80px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    backdrop-filter: blur(10px);
+}
+
+main {
+    width: 90%;
+    min-height: 100vh;
+    height: auto;
+    margin: 120px auto 5% auto;
+    margin-top: 120px;
+    border: 1px solid transparent;
+    background-color: #ffffff;
+    border-radius: 30px;
+    z-index: 1;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    height: 120px;
+    margin-left: 15px;
+}
+
+.contenedormenu {
+    justify-content: flex-end;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.buscador {
+    width: 400px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formbuscador {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.inputbuscador {
+    border-radius: 50px;
+    width: 100%;
+    max-width: 350px;
+    height: 40px;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px 40px 10px 10px;
+    transition: all 0.3s ease;
+    border: 1px solid #636363;
+}
+
+.inputbuscador:focus {
+    border-color: #7B2CBF;
+    box-shadow: 0 0 5px rgba(255, 146, 0, 0.2);
+    outline: none;
+}
+
+.botonbuscador {
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.menu {
+    height: 100%;
+    align-items: center;
+    display: flex;
+}
+
+.ulmenu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.limenu {
+    margin: 0;
+    display: inline;
+}
+
+.amenu {
+    display: block;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
+    font-size: 20px;
+}
+
+.amenu:hover {
+    color: grey;
+}
+
+.amenu.active {
+    color: #7B2CBF;
+    border-bottom: 2px solid #7B2CBF;
+}
+
+@media (max-width:700px) {
+    header {
+        height: auto;
+        padding: 10px;
+    }
+
+    .contenedormenu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .buscador {
+        width: 100%;
+        margin: 0;
+    }
+
+    .inputbuscador {
+        width: 100%;
+    }
+
+    .ulmenu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+h1,
+.titulo_form {
+    font-size: 60px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color:#54049b;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 50px;
+    font-style: italic;
+}
+
+/* Estilos del catalogo / panel del proveedor */
+h1 {
+    margin-bottom: 5%;
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+.contenedor_tarjeta_destacados {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.25);
+    margin-left: 3%;
+}
+
+.contenedor_tarjeta_imagen {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor_tarjeta_imagen img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.contenedor_tarjeta_info {
+    padding: 10px;
+    padding-bottom: 30px;
+    text-align: center;
+    border-top: 1px solid #eee;
+    position: relative;
+    background-color: #FDE6C7;
+    border-radius: 5%;
+}
+
+.contenedor_tarjeta_info::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 18px;
+    background-color: #FF9200;
+}
+
+.boton_favorito {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 50px;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.boton_favorito.favorito_activo {
+    color: #FFD700;
+}
+
+.boton_carrito {
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    background-color: #FF9200;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 8px 12px;
+    color: white;
+}
+
+/* Panel de control del proveedor */
+.panel_provedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    height: 100%;
+    gap: 20px;
+    background-color: #F5F3F7;
+}
+
+/* Pagina principal */
+#pagina_principal_body {
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+#pagina_principal_body .proveedores_destacados {
+    min-height: 30vh;
+    height: auto;
+}
+
+#paigina_principal {
+    margin-top: 140px;
+    justify-content: center;
+}
+
+.banner_principal {
+    display: flex;
+    width: 100%;
+    height: 40%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+
+.banner_link {
+    width: 55%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 5%;
+    border-left: 1px solid #ff9200;
+    border-right: 1px solid #ff9200;
+    border-bottom: 4px solid #ff9200;
+    box-shadow: 3px solid #c46d00;
+}
+
+.boton_banner {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+
+    width: 70px;
+    height: 250px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+    flex-shrink: 0;
+}
+
+.boton_banner .material-symbols-outlined {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 60px !important;
+    font-variation-settings: 'opsz' 48;
+    font-weight: 500;
+
+    color: #A855F7;
+}
+
+.boton_banner .material-symbols-outlined:hover {
+    color: #560079;
+}
+
+.alineador_elementos {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 30%;
+    height: auto;
+}
+
+.alineador_elementos2 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 30%;
+    height: auto;
+    justify-content: center;
+}
+
+.linea_provedores {
+    width: 62%;
+    height: 10px;
+    margin: 0;
+    text-align: left;
+    background-color: #A855F7;
+}
+
+.l_destacados {
+    font-size: 40px;
+    font-weight: bold;
+    width: 30%;
+    margin: 0;
+    text-align: left;
+    margin-left: 5%;
+    color: #A855F7
+}
+
+.proveedores_destacados {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.card_provedores_destacados {
+    width: 25%;
+    border-radius: 4%;
+    height: 250px;
+    margin-left: 2%;
+    background-color: #F5F3F7;
+    border: 2px solid #2e2e2e;
+}
+
+.contenedor_imagen_empresa {
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: white;
+    margin-left: 5%;
+    margin-top: 3%;
+    margin-right: 3%;
+    object-fit: cover;
+}
+
+.contenedor_imagen_empresa img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.contenedor_nombre_empresa {
+    color: black;
+    font-size: 32px;
+    font-weight: normal;
+}
+
+.card_link {
+    display: block;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+.card_tag {
+    text-decoration: none;
+    background-color: #d1cfcf;
+    color: black;
+    font-size: 22px;
+    margin: 0px 14px;
+    border-radius: 5%;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.ver_mas {
+    margin-top: 10%;
+    margin-left: 73%;
+    font-size: 22px;
+    
+    font-weight: bold;
+    color: #A855F7;
+}
+
+iframe {
+    width: 100%;
+    height: 22%;
+    overflow: hidden;
+    border: none;
+}

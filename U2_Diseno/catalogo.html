@@ -1,0 +1,214 @@
+<!-- MAESTRA -->
+
+<!--    ESTE CODIGO ES DE UN PROYECTO QUE TENIAMOS HECHO HACE TIEMPO
+        Y QUE ESTAMOS REUTILIZANDO, NO TIENE LAS MEJORES PRACTICAS
+        Y HUBO VARIAS PERSONAS QUE LE METIERON MANO ANTES, POR FAVOR
+        IGNORAR LOS COMENTARIOS Y LOS NOMBRES DE LAS CLASES. -->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pagina principal</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body id="pagina_principal_body">
+    <header>
+        <section class="logo"></section>
+        <section class="contenedormenu">
+            <section class="buscador">
+                <form action="" class="formbuscador" method="POST">
+                    <input type="text" class="inputbuscador" />
+                    <input type="submit" value="Buscar" class="botonbuscador" />
+                </form>
+            </section>
+            <section class="menu">
+                <nav>
+                    <ul class="ulmenu">
+                        <li class="limenu">
+                            <a href="index.html" class="amenu">Inicio</a>
+                        </li>
+                        <li class="limenu"><a href="" class="amenu">Catalogo</a></li>
+                        <li class="limenu"><a href="" class="amenu">Favoritos</a></li>
+                        <li class="limenu"><a href="" class="amenu">Carrito</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </section>
+    </header>
+    <!--     sientase libre de borrar imagenes si llegan a ver alguna, es solo de ejemplo 
+-->
+    <main class="panel_provedor">
+        <!-- hola necesito que en el span se agregue el nombre del usuario -->
+        <h1 class="titulo_form" id="paigina_principal">
+            Bienvenido <span></span>
+        </h1>
+        
+        <article class="alineador_elementos">
+            <h2 class="l_destacados">Proveedores destacados</h2>
+            <hr class="linea_provedores" />
+        </article>
+        <section class="proveedores_destacados">
+            <!--         aqui necesito que de hacia atras en un carrucel de 10 empreasas destacadas  -->
+            <button id="btn_anterior_2" class="boton_banner" type="button">
+                <span class="material-symbols-outlined">arrow_circle_left</span>
+            </button>
+            <!-- tambien necesito que agrguen dos mas de este elemento(card_provedores_destacados) con todos sus elementos responsivos a el carrucel- se los dejo pegado igual si lo quieren trabajar asi o lo ponene ustedes desde backend-->
+            <article class="card_provedores_destacados">
+                <!--    asignar el link correspondientes a  el  "a" de  el perfil de las empreas asi como llenar los datos de las empresa en las tarjetas -->
+                <a class="card_link" href="">
+                    <!--             necesito que aqui metan la imagen de perfil de la empresa -->
+                    <div class="alineador_elementos">
+                        <article class="contenedor_imagen_empresa">
+                            <img class="imagen_empresa" src="example.png" alt="" />
+                        </article>
+                        <!--Ponganme el nombre de la empresa asociada con el link e imagen-->
+                        <h3 class="contenedor_nombre_empresa">RedCola</h3>
+                    </div>
+                    <!--  necesito que me inserten el numero de etiquetas correspondientes al producto maximo 4-->
+                    <ul class="alineador_elementos2">
+                        <li class="card_tag">etiqueta</li>
+                        <li class="card_tag">etiqueta</li>
+                        <li class="card_tag">etiqueta</li>
+                        <li class="card-tag"></li>
+                    </ul>
+                    <p class="ver_mas">Ver más</p>
+                </a>
+            </article>
+            <article class="card_provedores_destacados">
+                <!--    asignar el link correspondientes a  el  "a" de  el perfil de las empreas asi como llenar los datos de las empresa en las tarjetas -->
+                <a class="card_link" href="">
+                    <!--             necesito que aqui metan la imagen de perfil de la empresa -->
+                    <div class="alineador_elementos">
+                        <article class="contenedor_imagen_empresa">
+                            <img class="imagen_empresa" src="example.png" alt="" />
+                        </article>
+                        <!--Ponganme el nombre de la empresa asociada con el link e imagen-->
+                        <h3 class="contenedor_nombre_empresa">Pepsi</h3>
+                    </div>
+                    <!--  necesito que me inserten el numero de etiquetas correspondientes al producto maximo 4-->
+                    <ul class="alineador_elementos2">
+                        <li class="card_tag">etiqueta</li>
+                        <li class="card_tag">etiqueta</li>
+                        <li class="card_tag">etiqueta</li>
+                        <li class="card-tag"></li>
+                    </ul>
+                    <p class="ver_mas">Ver más</p>
+                </a>
+            </article>
+            <article class="card_provedores_destacados">
+                <!--    asignar el link correspondientes a  el  "a" de  el perfil de las empreas asi como llenar los datos de las empresa en las tarjetas -->
+                <a class="card_link" href="">
+                    <!--             necesito que aqui metan la imagen de perfil de la empresa -->
+                    <div class="alineador_elementos">
+                        <article class="contenedor_imagen_empresa">
+                            <img class="imagen_empresa" src="example.png" alt="" />
+                        </article>
+                        <!--Ponganme el nombre de la empresa asociada con el link e imagen-->
+                        <h3 class="contenedor_nombre_empresa">CocaCola</h3>
+                    </div>
+                    <!--  necesito que me inserten el numero de etiquetas correspondientes al producto maximo 4-->
+                    <ul class="alineador_elementos2">
+                        <li class="card_tag">etiqueta</li>
+                        <li class="card_tag">etiqueta</li>
+                        <li class="card_tag">etiqueta</li>
+                        
+                    </ul>
+                    <p class="ver_mas">Ver más</p>
+                </a>
+                <!--necesito que esta pagina se genere infinitamente mientras se escrolea alternando entre este carrucel y
+                el de empresas destacadas, los podructos pueden ser de cualquier empresa, no tienen relacion con el carrucel de arriba-->
+            </article>
+            <!-- aqui necesito que de hacia adelante con los productos de la empresa -->
+            <button id="btn_siguiente_2" class="boton_banner" type="button">
+                <span class="material-symbols-outlined">arrow_circle_right</span>
+            </button>
+        </section>
+        <section class="proveedores_destacados">
+            <!--         aqui necesito que de hacia atras en un carrucel de 10 empreasas destacadas  -->
+            <button id="btn_anterior_2" class="boton_banner" type="button">
+                <span class="material-symbols-outlined">arrow_circle_left</span>
+            </button>
+            <!-- tambien necesito que agrguen dos mas de este elemento(card_provedores_destacados) con todos sus elementos responsivos a el carrucel- se los dejo pegado igual si lo quieren trabajar asi o lo ponene ustedes desde backend-->
+            <article class="card_provedores_destacados">
+                <!--    asignar el link correspondientes a  el  "a" de  el perfil de las empreas asi como llenar los datos de las empresa en las tarjetas -->
+                <a class="card_link" href="">
+                    <!--             necesito que aqui metan la imagen de perfil de la empresa -->
+                    <div class="alineador_elementos">
+                        <article class="contenedor_imagen_empresa">
+                            <img class="imagen_empresa" src="example.png" alt="" />
+                        </article>
+                        <!--Ponganme el nombre de la empresa asociada con el link e imagen-->
+                        <h3 class="contenedor_nombre_empresa">RedCola</h3>
+                    </div>
+                    <!--  necesito que me inserten el numero de etiquetas correspondientes al producto maximo 4-->
+                    <ul class="alineador_elementos2">
+                        <li class="card_tag">etiqueta</li>
+                        <li class="card_tag">etiqueta</li>
+                        <li class="card_tag">etiqueta</li>
+                        <li class="card-tag"></li>
+                    </ul>
+                    <p class="ver_mas">Ver más</p>
+                </a>
+            </article>
+            <article class="card_provedores_destacados">
+                <!--    asignar el link correspondientes a  el  "a" de  el perfil de las empreas asi como llenar los datos de las empresa en las tarjetas -->
+                <a class="card_link" href="">
+                    <!--             necesito que aqui metan la imagen de perfil de la empresa -->
+                    <div class="alineador_elementos">
+                        <article class="contenedor_imagen_empresa">
+                            <img class="imagen_empresa" src="example.png" alt="" />
+                        </article>
+                        <!--Ponganme el nombre de la empresa asociada con el link e imagen-->
+                        <h3 class="contenedor_nombre_empresa">Pepsi</h3>
+                    </div>
+                    <!--  necesito que me inserten el numero de etiquetas correspondientes al producto maximo 4-->
+                    <ul class="alineador_elementos2">
+                        <li class="card_tag">etiqueta</li>
+                        <li class="card_tag">etiqueta</li>
+                        <li class="card_tag">etiqueta</li>
+                        <li class="card-tag"></li>
+                    </ul>
+                    <p class="ver_mas">Ver más</p>
+                </a>
+            </article>
+            <article class="card_provedores_destacados">
+                <!--    asignar el link correspondientes a  el  "a" de  el perfil de las empreas asi como llenar los datos de las empresa en las tarjetas -->
+                <a class="card_link" href="">
+                    <!--             necesito que aqui metan la imagen de perfil de la empresa -->
+                    <div class="alineador_elementos">
+                        <article class="contenedor_imagen_empresa">
+                            <img class="imagen_empresa" src="example.png" alt="" />
+                        </article>
+                        <!--Ponganme el nombre de la empresa asociada con el link e imagen-->
+                        <h3 class="contenedor_nombre_empresa">CocaCola</h3>
+                    </div>
+                    <!--  necesito que me inserten el numero de etiquetas correspondientes al producto maximo 4-->
+                    <ul class="alineador_elementos2">
+                        <li class="card_tag">etiqueta</li>
+                        <li class="card_tag">etiqueta</li>
+                        <li class="card_tag">etiqueta</li>
+                        
+                    </ul>
+                    <p class="ver_mas">Ver más</p>
+                </a>
+                <!--necesito que esta pagina se genere infinitamente mientras se escrolea alternando entre este carrucel y
+                el de empresas destacadas, los podructos pueden ser de cualquier empresa, no tienen relacion con el carrucel de arriba-->
+            </article>
+            <!-- aqui necesito que de hacia adelante con los productos de la empresa -->
+            <button id="btn_siguiente_2" class="boton_banner" type="button">
+                <span class="material-symbols-outlined">arrow_circle_right</span>
+            </button>
+        </section>
+        <!-- <section class="proveedores_destacados">
+                    aqui necesito que de hacia atras en un carrucel de 10 empreasas destacadas  
+            
+        </section> -->
+    </main>
+</body>
+</html>
